@@ -1,7 +1,5 @@
 pipeline {
     agent any
-
-    stages {
        
     stage ('slack notification') {
                slackSend channel: 'rivet-jenkins', 
@@ -10,6 +8,6 @@ pipeline {
                    teamDomain: 'kaay', 
                    tokenCredentialId: 'Jenkins-slack', 
                    username: ''  
-    }
+
     } 
 }
